@@ -1,0 +1,50 @@
+# Activity 1 – Confusion Matrix: Healthcare Classification Model
+
+## Scenario
+
+A healthcare system developed a **machine learning model** to classify patients into two categories:
+
+- **Healthy**
+- **Sick**
+
+Classification is based on medical test results and symptoms.
+
+---
+
+## Dataset Overview
+
+| Split | Records |
+|-------|---------|
+| Total dataset | 100 patient records |
+| Training set  | 70 records |
+| Testing set   | 30 records |
+
+---
+
+## Model Testing Results (30 unseen records)
+
+After training, the model was evaluated on the **30 test records**.
+The test set was assumed to be balanced: **15 Healthy** and **15 Sick** patients.
+
+**3 misclassifications were recorded:**
+
+| Error Type | Description | Count |
+|------------|-------------|-------|
+| False Negative (FN) | Sick patients predicted as Healthy | 2 |
+| False Positive (FP) | Healthy patients predicted as Sick  | 1 |
+
+---
+
+## Confusion Matrix Values
+
+| | Predicted: Healthy | Predicted: Sick |
+|---|---|---|
+| **Actual: Healthy** | TN = 14 | FP = 1 |
+| **Actual: Sick**    | FN = 2  | TP = 13 |
+
+- **True Positive (TP):** 13 — Sick patients correctly identified as Sick
+- **True Negative (TN):** 14 — Healthy patients correctly identified as Healthy
+- **False Positive (FP):** 1 — Healthy patient incorrectly flagged as Sick
+- **False Negative (FN):** 2 — Sick patients missed and classified as Healthy
+
+![alt text](image.png)
